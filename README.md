@@ -5,7 +5,7 @@ Built as a portfolio project to showcase multi-sensor data analysis, cross-senso
 
 ## Live Demo
 
-🔗 [View Live on GitHub Pages]()
+🔗 [View Live on GitHub Pages](https://priyasesh.github.io/Aqua_Terra_Explorer/)
 
 ## What It Does
 
