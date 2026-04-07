@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Terra Explorer - Multi-Sensor Data Fusion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1>Aqua Terra Explorer</h1>
+        <p class="eyebrow">Multi-Sensor Environmental Monitoring System</p>
+      </div>
+      <div class="header-metrics">
+        <div class="metric">
+          <span class="metric-value" id="accuracy">95%</span>
+          <span class="metric-label">Operational Accuracy</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" id="objects">214</span>
+          <span class="metric-label">Objects Detected</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" id="dataProcessed">100GB</span>
+          <span class="metric-label">Data Processed</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Control Panel -->
+    <div class="control-panel">
+      <button class="primary-btn" id="startAnalysis">Start Data Analysis</button>
+      <button class="secondary-btn" id="exportReport">Export Analysis</button>
+      <button class="theme-toggle" id="themeToggle">🌙</button>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-grid">
+      <!-- Sensor Inputs -->
+      <div class="panel sensor-panel">
+        <h2>Sensor Inputs</h2>
+        <div class="sensor-grid">
+          <div class="sensor-card camera" id="cameraFeed">
+            <h3>Camera Array</h3>
+            <div class="sensor-data">
+              <span class="data-value">214 objects</span>
+              <span class="data-label">HD Visual Detection</span>
+            </div>
+          </div>
+          <div class="sensor-card sonar" id="sonarFeed">
+            <h3>SONAR</h3>
+            <div class="sensor-data">
+              <span class="data-value">0-5m depth</span>
+              <span class="data-label">Surface Mapping</span>
+            </div>
+          </div>
+          <div class="sensor-card gpr" id="gprFeed">
+            <h3>GPR</h3>
+            <div class="sensor-data">
+              <span class="data-value">0-2m depth</span>
+              <span class="data-label">Subsurface Scanning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Fusion Pipeline -->
+      <div class="panel fusion-panel">
+        <h2>Data Fusion Pipeline</h2>
+        <div class="pipeline-stages">
+          <div class="pipeline-stage raw">Raw Data<br><span class="stage-metric">100GB</span></div>
+          <div class="pipeline-stage clean">Clean Data<br><span class="stage-metric">98GB</span></div>
+          <div class="pipeline-stage fused active">Fused Data<br><span class="stage-metric">95%</span></div>
+          <div class="pipeline-stage validated">Validated<br><span class="stage-metric">214 objects</span></div>
+        </div>
+      </div>
+
+      <!-- Consistency Analysis -->
+      <div class="panel analysis-panel">
+        <h2>Consistency Analysis</h2>
+        <div class="analysis-metrics">
+          <div class="metric-row">
+            <span>Cross-Sensor Alignment</span>
+            <span class="metric-value" id="alignment">95%</span>
+          </div>
+          <div class="metric-row">
+            <span>Inconsistencies</span>
+            <span class="metric-value error" id="inconsistencies">12</span>
+          </div>
+          <div class="metric-row">
+            <span>Anomalies Detected</span>
+            <span class="metric-value warning" id="anomalies">5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subsurface Visualization -->
+      <div class="panel subsurface-panel">
+        <h2>Subsurface Map</h2>
+        <canvas id="subsurfaceCanvas" width="400" height="300"></canvas>
+        <div class="legend">
+          <span class="legend-item"><div class="legend-dot metallic"></div>Metallic Debris</span>
+          <span class="legend-item"><div class="legend-dot pipe"></div>Pipe Structure</span>
+          <span class="legend-item"><div class="legend-dot cavity"></div>Subsurface Cavity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
