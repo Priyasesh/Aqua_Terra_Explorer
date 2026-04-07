@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0f1a;
+  --bg-secondary: #0f1626;
+  --surface: #1a2038;
+  --surface-glow: #25315e;
+  --accent-primary: #00d4ff;
+  --accent-secondary: #7c3aed;
+  --accent-warning: #ff6b6b;
+  --accent-success: #51cf66;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-glow: rgba(0, 212
